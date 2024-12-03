@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form"
 
 export default function PatientForm() {
 
-  const {register, handleSubmit} = useForm();
+  const {register} = useForm();
 
 
 
@@ -28,7 +28,9 @@ export default function PatientForm() {
             className="w-full p-3  border border-gray-100"
             type="text"
             placeholder="Nombre del Paciente"
-            {...register('name', {required: 'El nombre del Paciente es Obligatorio'})}
+            {...register('name', {
+              required: 'El nombre del Paciente es Obligatorio'
+            })}
           />
         </div>
 
